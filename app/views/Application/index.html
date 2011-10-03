@@ -4,3 +4,12 @@
 <h2>Welcome to the SuperBlog</h2>
 
 <a href="/post/">Create a new blogpost</a>
+
+<ul>
+    #{list items:posts, as:'post'}
+    <li>
+        <a href="${post.id}">${post.title}</a>
+    </li>
+    #{/list}
+
+</ul>
