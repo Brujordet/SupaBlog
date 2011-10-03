@@ -1,16 +1,25 @@
 package controllers;
 
+import models.Post;
 import play.*;
+import play.data.validation.Required;
 import play.mvc.*;
 
 import java.util.*;
-
-import models.*;
 
 public class Application extends Controller {
 
     public static void index() {
         render();
+    }
+
+    public static void showPostForm(){
+        render();
+    }
+
+    public static void createPost(@Required String title, @Required String message){
+        Post post = new Post(title, message);
+        post.save();
     }
 
 }

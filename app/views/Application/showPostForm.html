@@ -1,0 +1,9 @@
+#{extends 'main.html' /}
+
+<h2>Create a your post!</h2>
+
+ #{form @Application.createPost()}
+        <input type="text" name="title" required placeholder="Post title" />
+        <input type="text" name="message" required placeholder="Your post" />
+        <input type="submit" value="save" />
+#{/form}
