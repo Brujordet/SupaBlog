@@ -24,4 +24,10 @@ public class Application extends Controller {
         index();
     }
 
+    public static void showPost(){
+        Long id = Long.valueOf(params.get("id"));
+        Post post = Post.findById(id);
+        render(post);
+    }
+
 }
